@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js-oevelse-1</title>
+    <style>
+        body {
+            color: burlywood;
+        }
+
+        #display {
+            width: 28vw;
+            height: 35vw;
+            border: 1px solid silver;
+            margin: 7vw;
+            padding: 1vw;
+        }
+
+        /*********************/
+    </style>
+
+</head>
+
+<body>
+    <div id="display"></div>
+
+    <script>
+        const displayBox = document.querySelector("#display");
+
+        let artist = ["Matt Corby", "Ben Howard", "Scoefield", "John Mayer", "Matt Anderson"]
+
+
+
+
+        displayBox.addEventListener("click", addArray)
+
+        function addArray() {
+
+
+            artist.forEach(kunstner => {
+                console.log(kunstner);
+
+                displayBox.innerHTML += kunstner + ":)" + "<br>";
+            });
+
+       
+                              
+            
+            //          artist.forEach(function(element){
+            //                           
+            //         
+            //              
+            //            document.write(element + ":)" + "<br>") 
+            //                           
+            //                           });
+
+
+
+        }
+    </script>
+</body>
+
+</html>

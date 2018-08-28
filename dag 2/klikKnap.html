@@ -14,7 +14,7 @@
             padding: 20px;
             margin: 10px;
         }
-        
+
         button {
             font-size: 2rem;
             margin: 10px;
@@ -33,13 +33,65 @@
     <button id="html">
         html
     </button>
-    <button id="slet">
+    <button id="flyt">
         flyt
     </button>
     <div id="box"></div>
     <div id="bax"></div>
 
     <script>
+        const klikKnap = document.querySelector("#klik");
+
+        const box1 = document.querySelector("#box");
+
+        const sletKnap = document.querySelector("#slet");
+
+        const htmlKnap = document.querySelector("#html");
+
+        const flytKnap = document.querySelector("#flyt");
+
+        const box2 = document.querySelector("#bax");
+
+
+        klikKnap.addEventListener("click", blevKlikket)
+
+        function blevKlikket() {
+
+            box1.textContent = "Jeg er blevet klikket";
+
+
+        };
+
+        sletKnap.addEventListener("click", sletIndhold)
+
+        function sletIndhold() {
+
+            box1.textContent = "";
+
+        }
+
+        htmlKnap.addEventListener("click", htmlIn)
+
+        function htmlIn() {
+
+
+
+            box1.innerHTML = "<h1>Jeg er en H1'er</h1> <br> <p>lorem ipsum bla bla bla bla bla bla.- hej med dig sådan det detn jo</P>";
+
+        }
+
+        flytKnap.addEventListener("click", flytIndhold);
+
+        function flytIndhold() {
+            console.log("indhold er flyttet");
+
+
+            const boxIndhold = box1.innerHTML;
+
+            box2.innerHTML = boxIndhold;
+
+            box1.innerHTML = "";
+        }
     </script>
 </body>
 
